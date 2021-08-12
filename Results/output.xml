@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210812 10:58:19.532" rpa="false" schemaversion="2">
+<suite id="s1" name="SlotSource" source="C:\development\robot-scripts\Maciej-Test\tests\SlotSource">
+<suite id="s1-s1" name="FirstTest" source="C:\development\robot-scripts\Maciej-Test\tests\SlotSource\FirstTest.robot">
+<test id="s1-s1-t1" name="User is able to compare full screen screenshots of current screen to the baseline version">
+<kw name="Given I open a browser" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210812 10:58:20.017" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210812 10:58:20.017" endtime="20210812 10:58:22.517"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210812 10:58:22.517" endtime="20210812 10:58:22.662"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:20.017" endtime="20210812 10:58:22.662"/>
+</kw>
+<kw name="And I navigate to the 'Slotsource Free Slots' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${website}== 'Slotsource UK'</arg>
+<arg>Go To Slotsource UK Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Ireland'</arg>
+<arg>Go To Slotsource Ireland Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Free Slots'</arg>
+<arg>Go To Slotsource Free Slots Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Go To Slotsource Free Slots Page" library="navigation_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.slotsource.ie/free-slots</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210812 10:58:22.662" level="INFO">Opening url 'http://www.slotsource.ie/free-slots'</msg>
+<status status="PASS" starttime="20210812 10:58:22.662" endtime="20210812 10:58:31.130"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:22.662" endtime="20210812 10:58:31.130"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:22.662" endtime="20210812 10:58:31.130"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:22.662" endtime="20210812 10:58:31.131"/>
+</kw>
+<kw name="When I enter Sneaky Blinders into the Free Slots Search Text Box" library="action_steps" sourcename="I enter ${game} into the Free Slots Search Text Box">
+<kw name="Enter ${game} into Free Slots Search Text Box" library="action_keywords" sourcename="Enter ${game} into Free Slots Search Text Box">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${free_slot_input_box}</arg>
+<arg>${game}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210812 10:58:31.134" level="INFO">Typing text 'Sneaky Blinders' into text field 'xpath=//*[@class="search"]'.</msg>
+<status status="PASS" starttime="20210812 10:58:31.133" endtime="20210812 10:58:32.513"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:31.132" endtime="20210812 10:58:32.513"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:31.132" endtime="20210812 10:58:32.514"/>
+</kw>
+<kw name="Then The current screen matches the baseline version" library="assertion_steps">
+<kw name="Assert Screenshots" library="assertion_keywords">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>document.body.style.zoom="50%"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20210812 10:58:32.520" level="INFO">Executing JavaScript:
+document.body.style.zoom="50%"
+Without any arguments.</msg>
+<status status="PASS" starttime="20210812 10:58:32.517" endtime="20210812 10:58:32.537"/>
+</kw>
+<kw name="Open Eyes" library="RobotEyes">
+<arg>SeleniumLibrary</arg>
+<arg>5</arg>
+<msg timestamp="20210812 10:58:32.545" level="INFO">roboteyestestfolder: User_is_able_to_compare_full_screen_screenshots_of_current_screen_to_the_baseline_version</msg>
+<status status="PASS" starttime="20210812 10:58:32.538" endtime="20210812 10:58:32.545"/>
+</kw>
+<kw name="Capture Full Screen" library="RobotEyes">
+<status status="PASS" starttime="20210812 10:58:32.546" endtime="20210812 10:58:33.068"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<kw name="Fail" library="BuiltIn">
+<arg>Image dissimilarity exceeds tolerance</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<msg timestamp="20210812 10:58:34.110" level="FAIL">Image dissimilarity exceeds tolerance</msg>
+<status status="FAIL" starttime="20210812 10:58:34.109" endtime="20210812 10:58:34.110"/>
+</kw>
+<msg timestamp="20210812 10:58:34.111" level="INFO">Comparison output: b'18333.1 (0.279746) @ 0,0'</msg>
+<status status="FAIL" starttime="20210812 10:58:33.069" endtime="20210812 10:58:34.111"/>
+</kw>
+<status status="FAIL" starttime="20210812 10:58:32.516" endtime="20210812 10:58:34.113"/>
+</kw>
+<status status="FAIL" starttime="20210812 10:58:32.515" endtime="20210812 10:58:34.114"/>
+</kw>
+<kw name="And I close the browser" library="common">
+<status status="NOT RUN" starttime="20210812 10:58:34.115" endtime="20210812 10:58:34.115"/>
+</kw>
+<tag>User is able to compare full screen screenshots of current screen to the baseline version</tag>
+<status status="FAIL" starttime="20210812 10:58:20.001" endtime="20210812 10:58:34.116">Image dissimilarity exceeds tolerance</status>
+</test>
+<test id="s1-s1-t2" name="User is able to compare screenshots of element SS Payment Icons">
+<kw name="Given I open a browser" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210812 10:58:34.122" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210812 10:58:34.121" endtime="20210812 10:58:36.376"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210812 10:58:36.376" endtime="20210812 10:58:36.600"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:34.120" endtime="20210812 10:58:36.600"/>
+</kw>
+<kw name="And I navigate to the 'Slotsource Ireland' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${website}== 'Slotsource UK'</arg>
+<arg>Go To Slotsource UK Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Ireland'</arg>
+<arg>Go To Slotsource Ireland Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Free Slots'</arg>
+<arg>Go To Slotsource Free Slots Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Go To Slotsource Ireland Website" library="navigation_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.slotsource.ie</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210812 10:58:36.600" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
+<status status="PASS" starttime="20210812 10:58:36.600" endtime="20210812 10:58:38.880"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:36.600" endtime="20210812 10:58:38.880"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:36.600" endtime="20210812 10:58:38.880"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:36.600" endtime="20210812 10:58:38.880"/>
+</kw>
+<kw name="And I scroll to element 'Payment Method Icons'" library="action_steps" sourcename="I scroll to element ${element}">
+<kw name="Scroll to element ${element}" library="action_keywords" sourcename="Scroll to element ${element}">
+<kw name="Load Dictionary" library="site_locators">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${locatorDictionary}</var>
+<arg>'Discover Icons'</arg>
+<arg>${discover_icons}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210812 10:58:38.890" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:38.889" endtime="20210812 10:58:38.890"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${locatorDictionary}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210812 10:58:38.892" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:38.890" endtime="20210812 10:58:38.892"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Payment Method Icons'</arg>
+<arg>${payment_icons}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:38.893" endtime="20210812 10:58:38.894"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Licensing Authorities and Testing Agencies'</arg>
+<arg>${authorities_agencies}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:38.894" endtime="20210812 10:58:38.894"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:38.888" endtime="20210812 10:58:38.895"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${locatorDictionary}</arg>
+<arg>${element}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20210812 10:58:38.896" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
+<status status="PASS" starttime="20210812 10:58:38.895" endtime="20210812 10:58:38.896"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${value}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210812 10:58:38.896" endtime="20210812 10:58:39.479"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:38.887" endtime="20210812 10:58:39.479"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:38.886" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Then The element 'Payment Method Icons' matches the baseline version" library="assertion_steps" sourcename="The element ${element} matches the baseline version">
+<kw name="Assert Screenshot Element ${element}" library="assertion_keywords" sourcename="Assert Screenshot Element ${element}">
+<kw name="Load Dictionary" library="site_locators">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${locatorDictionary}</var>
+<arg>'Discover Icons'</arg>
+<arg>${discover_icons}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210812 10:58:39.479" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${locatorDictionary}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210812 10:58:39.479" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Payment Method Icons'</arg>
+<arg>${payment_icons}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Licensing Authorities and Testing Agencies'</arg>
+<arg>${authorities_agencies}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${locatorDictionary}</arg>
+<arg>${element}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20210812 10:58:39.479" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.479"/>
+</kw>
+<kw name="Open Eyes" library="RobotEyes">
+<arg>SeleniumLibrary</arg>
+<arg>5</arg>
+<msg timestamp="20210812 10:58:39.495" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Payment_Icons</msg>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:39.495"/>
+</kw>
+<kw name="Capture Element" library="RobotEyes">
+<arg>${value}</arg>
+<status status="PASS" starttime="20210812 10:58:39.495" endtime="20210812 10:58:41.157"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<msg timestamp="20210812 10:58:41.688" level="INFO">Comparison output: b'0 (0) @ 0,0'</msg>
+<status status="PASS" starttime="20210812 10:58:41.157" endtime="20210812 10:58:41.688"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:41.688"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:39.479" endtime="20210812 10:58:41.688"/>
+</kw>
+<kw name="And I close the browser" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210812 10:58:41.688" endtime="20210812 10:58:45.298"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test Complete</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210812 10:58:45.298" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210812 10:58:45.298" endtime="20210812 10:58:45.298"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:41.688" endtime="20210812 10:58:45.298"/>
+</kw>
+<tag>User is able to compare screenshots of element SS Payment Icons</tag>
+<status status="PASS" starttime="20210812 10:58:34.119" endtime="20210812 10:58:45.298"/>
+</test>
+<test id="s1-s1-t3" name="User is able to compare screenshots of element SS Discover Icons">
+<kw name="Given I open a browser" library="common">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>about:blank</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210812 10:58:45.298" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210812 10:58:45.298" endtime="20210812 10:58:47.362"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210812 10:58:47.363" endtime="20210812 10:58:47.509"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:45.298" endtime="20210812 10:58:47.509"/>
+</kw>
+<kw name="And I navigate to the 'Slotsource Ireland' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${website}== 'Slotsource UK'</arg>
+<arg>Go To Slotsource UK Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Ireland'</arg>
+<arg>Go To Slotsource Ireland Website</arg>
+<arg>ELSE IF</arg>
+<arg>${website}== 'Slotsource Free Slots'</arg>
+<arg>Go To Slotsource Free Slots Page</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Go To Slotsource Ireland Website" library="navigation_keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.slotsource.ie</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20210812 10:58:47.516" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
+<status status="PASS" starttime="20210812 10:58:47.515" endtime="20210812 10:58:49.502"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:47.515" endtime="20210812 10:58:49.502"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:47.514" endtime="20210812 10:58:49.502"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:47.513" endtime="20210812 10:58:49.503"/>
+</kw>
+<kw name="And I scroll to element 'Discover Icons'" library="action_steps" sourcename="I scroll to element ${element}">
+<kw name="Scroll to element ${element}" library="action_keywords" sourcename="Scroll to element ${element}">
+<kw name="Load Dictionary" library="site_locators">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${locatorDictionary}</var>
+<arg>'Discover Icons'</arg>
+<arg>${discover_icons}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210812 10:58:49.507" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:49.506" endtime="20210812 10:58:49.507"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${locatorDictionary}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210812 10:58:49.508" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:49.507" endtime="20210812 10:58:49.508"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Payment Method Icons'</arg>
+<arg>${payment_icons}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:49.509" endtime="20210812 10:58:49.509"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Licensing Authorities and Testing Agencies'</arg>
+<arg>${authorities_agencies}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:49.509" endtime="20210812 10:58:49.510"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.505" endtime="20210812 10:58:49.510"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${locatorDictionary}</arg>
+<arg>${element}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20210812 10:58:49.511" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
+<status status="PASS" starttime="20210812 10:58:49.511" endtime="20210812 10:58:49.511"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${value}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20210812 10:58:49.512" endtime="20210812 10:58:49.897"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.504" endtime="20210812 10:58:49.897"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.504" endtime="20210812 10:58:49.898"/>
+</kw>
+<kw name="Then The element 'Discover Icons' matches the baseline version" library="assertion_steps" sourcename="The element ${element} matches the baseline version">
+<kw name="Assert Screenshot Element ${element}" library="assertion_keywords" sourcename="Assert Screenshot Element ${element}">
+<kw name="Load Dictionary" library="site_locators">
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${locatorDictionary}</var>
+<arg>'Discover Icons'</arg>
+<arg>${discover_icons}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20210812 10:58:49.902" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:49.901" endtime="20210812 10:58:49.902"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${locatorDictionary}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20210812 10:58:49.903" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210812 10:58:49.902" endtime="20210812 10:58:49.903"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Payment Method Icons'</arg>
+<arg>${payment_icons}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:49.904" endtime="20210812 10:58:49.904"/>
+</kw>
+<kw name="Set To Dictionary" library="Collections">
+<arg>${locatorDictionary}</arg>
+<arg>'Licensing Authorities and Testing Agencies'</arg>
+<arg>${authorities_agencies}</arg>
+<doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
+<status status="PASS" starttime="20210812 10:58:49.904" endtime="20210812 10:58:49.905"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.900" endtime="20210812 10:58:49.905"/>
+</kw>
+<kw name="Get From Dictionary" library="Collections">
+<var>${value}</var>
+<arg>${locatorDictionary}</arg>
+<arg>${element}</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<msg timestamp="20210812 10:58:49.906" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
+<status status="PASS" starttime="20210812 10:58:49.905" endtime="20210812 10:58:49.906"/>
+</kw>
+<kw name="Open Eyes" library="RobotEyes">
+<arg>SeleniumLibrary</arg>
+<arg>5</arg>
+<msg timestamp="20210812 10:58:49.912" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Discover_Icons</msg>
+<status status="PASS" starttime="20210812 10:58:49.906" endtime="20210812 10:58:49.913"/>
+</kw>
+<kw name="Capture Element" library="RobotEyes">
+<arg>${value}</arg>
+<status status="PASS" starttime="20210812 10:58:49.913" endtime="20210812 10:58:51.209"/>
+</kw>
+<kw name="Compare Images" library="RobotEyes">
+<msg timestamp="20210812 10:58:51.412" level="INFO">Comparison output: b'0 (0) @ 0,0'</msg>
+<status status="PASS" starttime="20210812 10:58:51.209" endtime="20210812 10:58:51.412"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.899" endtime="20210812 10:58:51.412"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:49.899" endtime="20210812 10:58:51.412"/>
+</kw>
+<kw name="And I close the browser" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20210812 10:58:51.412" endtime="20210812 10:58:53.751"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Test Complete</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20210812 10:58:53.751" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210812 10:58:53.751" endtime="20210812 10:58:53.751"/>
+</kw>
+<status status="PASS" starttime="20210812 10:58:51.412" endtime="20210812 10:58:53.751"/>
+</kw>
+<tag>User is able to compare screenshots of element SS Discover Icons</tag>
+<status status="PASS" starttime="20210812 10:58:45.298" endtime="20210812 10:58:53.751"/>
+</test>
+<doc>Practice a basic test</doc>
+<status status="FAIL" starttime="20210812 10:58:19.626" endtime="20210812 10:58:53.751"/>
+</suite>
+<status status="FAIL" starttime="20210812 10:58:19.548" endtime="20210812 10:58:53.751"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">User is able to compare full screen screenshots of current screen to the baseline version</stat>
+<stat pass="1" fail="0" skip="0">User is able to compare screenshots of element SS Discover Icons</stat>
+<stat pass="1" fail="0" skip="0">User is able to compare screenshots of element SS Payment Icons</stat>
+</tag>
+<suite>
+<stat pass="2" fail="1" skip="0" id="s1" name="SlotSource">SlotSource</stat>
+<stat pass="2" fail="1" skip="0" id="s1-s1" name="FirstTest">SlotSource.FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
