@@ -17,6 +17,7 @@ Assert Screenshots
     open eyes               lib=SeleniumLibrary  tolerance=5
     capture full screen
     compare images
+    close browser
 
 Assert Screenshot Element ${element}
     Load Dictionary
@@ -24,3 +25,4 @@ Assert Screenshot Element ${element}
     open eyes               lib=SeleniumLibrary  tolerance=5
     capture element         ${value}
     compare images
+    close browser
