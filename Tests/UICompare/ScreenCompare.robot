@@ -23,6 +23,8 @@ User is able to compare full screens of Free Slots Licensing Authorities section
     Then The current screen matches the baseline version
     And I close the browser
 
+#robot -d results -v images_dir:base tests/UICompare
+
 User is able to compare screenshots of element SS Payment Icons
     [Tags]  User is able to compare screenshots of element SS Payment Icons
     Given I open a browser

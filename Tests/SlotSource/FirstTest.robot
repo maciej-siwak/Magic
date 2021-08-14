@@ -20,5 +20,3 @@ User is able search for Peaky Blinders on the Free Slots page
     When I enter Peaky Blinders into the Free Slots Search Text Box
     Then I am able to see the game Peaky Blinders
     And I close the browser
-
-#robot -d results -v images_dir:base tests/SlotSource
