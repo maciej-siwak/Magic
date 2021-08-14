@@ -14,13 +14,13 @@ Assert ${game} Is Shown
 
 Assert Screenshots
     Execute javascript      document.body.style.zoom="50%"
-    open eyes               SeleniumLibrary  5
+    open eyes               lib=SeleniumLibrary  tolerance=5
     capture full screen
     compare images
 
 Assert Screenshot Element ${element}
     Load Dictionary
     ${value}                Get From Dictionary  ${locatorDictionary}  ${element}
-    open eyes               SeleniumLibrary  5
+    open eyes               lib=SeleniumLibrary  tolerance=5
     capture element         ${value}
     compare images
