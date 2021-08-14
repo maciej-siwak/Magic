@@ -11,7 +11,7 @@ User is able to compare full screen screenshots of current screen to the baselin
     [Tags]  User is able to compare full screen screenshots of current screen to the baseline version
     Given I open a browser
     And I navigate to the 'Slotsource Free Slots' page
-    When I enter Sneaky Blinders into the Free Slots Search Text Box
+    When I enter Peaky Blinders into the Free Slots Search Text Box
     Then The current screen matches the baseline version
     And I close the browser
 
