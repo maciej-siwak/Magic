@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210814 15:27:04.466" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210814 15:47:21.123" rpa="false" schemaversion="2">
 <suite id="s1" name="UICompare" source="C:\development\robot-scripts\Maciej-Test\tests\UICompare">
 <suite id="s1-s1" name="ScreenCompare" source="C:\development\robot-scripts\Maciej-Test\tests\UICompare\ScreenCompare.robot">
 <test id="s1-s1-t1" name="User is able to compare full screen screenshots of current screen to the baseline version">
@@ -8,14 +8,14 @@
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210814 15:27:04.858" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210814 15:27:04.858" endtime="20210814 15:27:06.928"/>
+<msg timestamp="20210814 15:47:21.511" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210814 15:47:21.511" endtime="20210814 15:47:23.927"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210814 15:27:06.928" endtime="20210814 15:27:07.149"/>
+<status status="PASS" starttime="20210814 15:47:23.927" endtime="20210814 15:47:24.066"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:04.858" endtime="20210814 15:27:07.149"/>
+<status status="PASS" starttime="20210814 15:47:21.511" endtime="20210814 15:47:24.067"/>
 </kw>
 <kw name="And I navigate to the 'Slotsource Free Slots' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -32,14 +32,14 @@
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://www.slotsource.ie/free-slots</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210814 15:27:07.149" level="INFO">Opening url 'http://www.slotsource.ie/free-slots'</msg>
-<status status="PASS" starttime="20210814 15:27:07.149" endtime="20210814 15:27:16.927"/>
+<msg timestamp="20210814 15:47:24.073" level="INFO">Opening url 'http://www.slotsource.ie/free-slots'</msg>
+<status status="PASS" starttime="20210814 15:47:24.072" endtime="20210814 15:47:33.587"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:07.149" endtime="20210814 15:27:16.927"/>
+<status status="PASS" starttime="20210814 15:47:24.071" endtime="20210814 15:47:33.588"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:07.149" endtime="20210814 15:27:16.927"/>
+<status status="PASS" starttime="20210814 15:47:24.070" endtime="20210814 15:47:33.588"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:07.149" endtime="20210814 15:27:16.927"/>
+<status status="PASS" starttime="20210814 15:47:24.069" endtime="20210814 15:47:33.588"/>
 </kw>
 <kw name="When I enter Peaky Blinders into the Free Slots Search Text Box" library="action_steps" sourcename="I enter ${game} into the Free Slots Search Text Box">
 <kw name="Enter ${game} into Free Slots Search Text Box" library="action_keywords" sourcename="Enter ${game} into Free Slots Search Text Box">
@@ -47,58 +47,59 @@
 <arg>${free_slot_input_box}</arg>
 <arg>${game}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210814 15:27:16.931" level="INFO">Typing text 'Peaky Blinders' into text field 'xpath=//*[@class="search"]'.</msg>
-<status status="PASS" starttime="20210814 15:27:16.930" endtime="20210814 15:27:18.327"/>
+<msg timestamp="20210814 15:47:33.592" level="INFO">Typing text 'Peaky Blinders' into text field 'xpath=//*[@class="search"]'.</msg>
+<status status="PASS" starttime="20210814 15:47:33.591" endtime="20210814 15:47:35.032"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:16.929" endtime="20210814 15:27:18.327"/>
+<status status="PASS" starttime="20210814 15:47:33.590" endtime="20210814 15:47:35.032"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:16.928" endtime="20210814 15:27:18.328"/>
+<status status="PASS" starttime="20210814 15:47:33.589" endtime="20210814 15:47:35.032"/>
 </kw>
 <kw name="Then The current screen matches the baseline version" library="assertion_steps">
 <kw name="Assert Screenshots" library="assertion_keywords">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.body.style.zoom="50%"</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20210814 15:27:18.334" level="INFO">Executing JavaScript:
+<msg timestamp="20210814 15:47:35.038" level="INFO">Executing JavaScript:
 document.body.style.zoom="50%"
 Without any arguments.</msg>
-<status status="PASS" starttime="20210814 15:27:18.330" endtime="20210814 15:27:18.403"/>
+<status status="PASS" starttime="20210814 15:47:35.035" endtime="20210814 15:47:35.050"/>
 </kw>
 <kw name="Open Eyes" library="RobotEyes">
 <arg>lib=SeleniumLibrary</arg>
 <arg>tolerance=5</arg>
-<msg timestamp="20210814 15:27:18.411" level="INFO">roboteyestestfolder: User_is_able_to_compare_full_screen_screenshots_of_current_screen_to_the_baseline_version</msg>
-<status status="PASS" starttime="20210814 15:27:18.404" endtime="20210814 15:27:18.411"/>
+<msg timestamp="20210814 15:47:35.056" level="INFO">roboteyestestfolder: User_is_able_to_compare_full_screen_screenshots_of_current_screen_to_the_baseline_version</msg>
+<status status="PASS" starttime="20210814 15:47:35.050" endtime="20210814 15:47:35.056"/>
 </kw>
 <kw name="Capture Full Screen" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:18.411" endtime="20210814 15:27:18.702"/>
+<status status="PASS" starttime="20210814 15:47:35.057" endtime="20210814 15:47:35.474"/>
 </kw>
 <kw name="Compare Images" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:18.702" endtime="20210814 15:27:18.717"/>
+<msg timestamp="20210814 15:47:36.584" level="INFO">Comparison output: b'0 (0) @ 0,0'</msg>
+<status status="PASS" starttime="20210814 15:47:35.474" endtime="20210814 15:47:36.584"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:18.717" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:36.584" endtime="20210814 15:47:40.397"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:18.330" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:35.034" endtime="20210814 15:47:40.397"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:18.329" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:35.033" endtime="20210814 15:47:40.397"/>
 </kw>
 <kw name="And I close the browser" library="common">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:40.397"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test Complete</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210814 15:27:22.442" level="INFO">Test Complete</msg>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:22.442"/>
+<msg timestamp="20210814 15:47:40.397" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:40.397"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:40.397"/>
 </kw>
 <tag>User is able to compare full screen screenshots of current screen to the baseline version</tag>
-<status status="PASS" starttime="20210814 15:27:04.858" endtime="20210814 15:27:22.442"/>
+<status status="PASS" starttime="20210814 15:47:21.511" endtime="20210814 15:47:40.397"/>
 </test>
 <test id="s1-s1-t2" name="User is able to compare full screens of Free Slots Licensing Authorities section">
 <kw name="Given I open a browser" library="common">
@@ -106,14 +107,14 @@ Without any arguments.</msg>
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210814 15:27:22.442" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:24.700"/>
+<msg timestamp="20210814 15:47:40.397" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:42.515"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210814 15:27:24.701" endtime="20210814 15:27:25.231"/>
+<status status="PASS" starttime="20210814 15:47:42.515" endtime="20210814 15:47:42.729"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:25.232"/>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:42.729"/>
 </kw>
 <kw name="And I navigate to the 'Slotsource Free Slots' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -130,14 +131,14 @@ Without any arguments.</msg>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://www.slotsource.ie/free-slots</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210814 15:27:25.289" level="INFO">Opening url 'http://www.slotsource.ie/free-slots'</msg>
-<status status="PASS" starttime="20210814 15:27:25.289" endtime="20210814 15:27:34.405"/>
+<msg timestamp="20210814 15:47:42.735" level="INFO">Opening url 'http://www.slotsource.ie/free-slots'</msg>
+<status status="PASS" starttime="20210814 15:47:42.735" endtime="20210814 15:47:52.655"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:25.289" endtime="20210814 15:27:34.405"/>
+<status status="PASS" starttime="20210814 15:47:42.734" endtime="20210814 15:47:52.656"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:25.289" endtime="20210814 15:27:34.405"/>
+<status status="PASS" starttime="20210814 15:47:42.733" endtime="20210814 15:47:52.656"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:25.289" endtime="20210814 15:27:34.406"/>
+<status status="PASS" starttime="20210814 15:47:42.732" endtime="20210814 15:47:52.656"/>
 </kw>
 <kw name="And I scroll to element 'Licensing Authorities and Testing Agencies'" library="action_steps" sourcename="I scroll to element ${element}">
 <kw name="Scroll to element ${element}" library="action_keywords" sourcename="Scroll to element ${element}">
@@ -147,93 +148,94 @@ Without any arguments.</msg>
 <arg>'Discover Icons'</arg>
 <arg>${discover_icons}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210814 15:27:34.411" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:34.410" endtime="20210814 15:27:34.411"/>
+<msg timestamp="20210814 15:47:52.659" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:47:52.658" endtime="20210814 15:47:52.659"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${locatorDictionary}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20210814 15:27:34.412" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:34.411" endtime="20210814 15:27:34.412"/>
+<msg timestamp="20210814 15:47:52.660" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:47:52.660" endtime="20210814 15:47:52.660"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Payment Method Icons'</arg>
 <arg>${payment_icons}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:34.412" endtime="20210814 15:27:34.413"/>
+<status status="PASS" starttime="20210814 15:47:52.661" endtime="20210814 15:47:52.661"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Licensing Authorities and Testing Agencies'</arg>
 <arg>${authorities_agencies}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:34.413" endtime="20210814 15:27:34.414"/>
+<status status="PASS" starttime="20210814 15:47:52.662" endtime="20210814 15:47:52.662"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:34.409" endtime="20210814 15:27:34.414"/>
+<status status="PASS" starttime="20210814 15:47:52.658" endtime="20210814 15:47:52.663"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${locatorDictionary}</arg>
 <arg>${element}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20210814 15:27:34.415" level="INFO">${value} = xpath=//h3[@class="menu-title"]</msg>
-<status status="PASS" starttime="20210814 15:27:34.414" endtime="20210814 15:27:34.415"/>
+<msg timestamp="20210814 15:47:52.663" level="INFO">${value} = xpath=//h3[@class="menu-title"]</msg>
+<status status="PASS" starttime="20210814 15:47:52.663" endtime="20210814 15:47:52.663"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${value}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20210814 15:27:34.415" endtime="20210814 15:27:34.759"/>
+<status status="PASS" starttime="20210814 15:47:52.664" endtime="20210814 15:47:53.047"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:34.408" endtime="20210814 15:27:34.759"/>
+<status status="PASS" starttime="20210814 15:47:52.657" endtime="20210814 15:47:53.047"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:34.407" endtime="20210814 15:27:34.759"/>
+<status status="PASS" starttime="20210814 15:47:52.656" endtime="20210814 15:47:53.047"/>
 </kw>
 <kw name="Then The current screen matches the baseline version" library="assertion_steps">
 <kw name="Assert Screenshots" library="assertion_keywords">
 <kw name="Execute Javascript" library="SeleniumLibrary">
 <arg>document.body.style.zoom="50%"</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20210814 15:27:34.759" level="INFO">Executing JavaScript:
+<msg timestamp="20210814 15:47:53.047" level="INFO">Executing JavaScript:
 document.body.style.zoom="50%"
 Without any arguments.</msg>
-<status status="PASS" starttime="20210814 15:27:34.759" endtime="20210814 15:27:35.037"/>
+<status status="PASS" starttime="20210814 15:47:53.047" endtime="20210814 15:47:53.316"/>
 </kw>
 <kw name="Open Eyes" library="RobotEyes">
 <arg>lib=SeleniumLibrary</arg>
 <arg>tolerance=5</arg>
-<msg timestamp="20210814 15:27:35.045" level="INFO">roboteyestestfolder: User_is_able_to_compare_full_screens_of_Free_Slots_Licensing_Authorities_section</msg>
-<status status="PASS" starttime="20210814 15:27:35.037" endtime="20210814 15:27:35.045"/>
+<msg timestamp="20210814 15:47:53.323" level="INFO">roboteyestestfolder: User_is_able_to_compare_full_screens_of_Free_Slots_Licensing_Authorities_section</msg>
+<status status="PASS" starttime="20210814 15:47:53.317" endtime="20210814 15:47:53.324"/>
 </kw>
 <kw name="Capture Full Screen" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:35.045" endtime="20210814 15:27:35.458"/>
+<status status="PASS" starttime="20210814 15:47:53.324" endtime="20210814 15:47:53.772"/>
 </kw>
 <kw name="Compare Images" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:35.458" endtime="20210814 15:27:35.474"/>
+<msg timestamp="20210814 15:47:54.830" level="INFO">Comparison output: b'1863.87 (0.0284408) @ 0,0'</msg>
+<status status="PASS" starttime="20210814 15:47:53.772" endtime="20210814 15:47:54.830"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:35.475" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:54.830" endtime="20210814 15:47:58.919"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:34.759" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:53.047" endtime="20210814 15:47:58.919"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:34.759" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:53.047" endtime="20210814 15:47:58.919"/>
 </kw>
 <kw name="And I close the browser" library="common">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:47:58.919"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test Complete</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210814 15:27:38.445" level="INFO">Test Complete</msg>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:38.445"/>
+<msg timestamp="20210814 15:47:58.919" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:47:58.919"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:47:58.919"/>
 </kw>
 <tag>User is able to compare full screens of Free Slots Licensing Authorities section</tag>
-<status status="PASS" starttime="20210814 15:27:22.442" endtime="20210814 15:27:38.445"/>
+<status status="PASS" starttime="20210814 15:47:40.397" endtime="20210814 15:47:58.919"/>
 </test>
 <test id="s1-s1-t3" name="User is able to compare screenshots of element SS Payment Icons">
 <kw name="Given I open a browser" library="common">
@@ -241,14 +243,14 @@ Without any arguments.</msg>
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210814 15:27:38.445" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:40.731"/>
+<msg timestamp="20210814 15:47:58.919" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:48:01.023"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210814 15:27:40.731" endtime="20210814 15:27:40.924"/>
+<status status="PASS" starttime="20210814 15:48:01.024" endtime="20210814 15:48:01.280"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:40.924"/>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:48:01.280"/>
 </kw>
 <kw name="And I navigate to the 'Slotsource Ireland' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -265,14 +267,14 @@ Without any arguments.</msg>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://www.slotsource.ie</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210814 15:27:40.924" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
-<status status="PASS" starttime="20210814 15:27:40.924" endtime="20210814 15:27:43.600"/>
+<msg timestamp="20210814 15:48:01.296" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
+<status status="PASS" starttime="20210814 15:48:01.296" endtime="20210814 15:48:03.521"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:40.924" endtime="20210814 15:27:43.600"/>
+<status status="PASS" starttime="20210814 15:48:01.296" endtime="20210814 15:48:03.521"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:40.924" endtime="20210814 15:27:43.601"/>
+<status status="PASS" starttime="20210814 15:48:01.296" endtime="20210814 15:48:03.521"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:40.924" endtime="20210814 15:27:43.601"/>
+<status status="PASS" starttime="20210814 15:48:01.296" endtime="20210814 15:48:03.522"/>
 </kw>
 <kw name="And I scroll to element 'Payment Method Icons'" library="action_steps" sourcename="I scroll to element ${element}">
 <kw name="Scroll to element ${element}" library="action_keywords" sourcename="Scroll to element ${element}">
@@ -282,47 +284,47 @@ Without any arguments.</msg>
 <arg>'Discover Icons'</arg>
 <arg>${discover_icons}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210814 15:27:43.612" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:43.611" endtime="20210814 15:27:43.612"/>
+<msg timestamp="20210814 15:48:03.524" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${locatorDictionary}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20210814 15:27:43.614" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:43.612" endtime="20210814 15:27:43.614"/>
+<msg timestamp="20210814 15:48:03.524" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Payment Method Icons'</arg>
 <arg>${payment_icons}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:43.614" endtime="20210814 15:27:43.615"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Licensing Authorities and Testing Agencies'</arg>
 <arg>${authorities_agencies}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:43.615" endtime="20210814 15:27:43.616"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:43.611" endtime="20210814 15:27:43.616"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${locatorDictionary}</arg>
 <arg>${element}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20210814 15:27:43.617" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
-<status status="PASS" starttime="20210814 15:27:43.616" endtime="20210814 15:27:43.617"/>
+<msg timestamp="20210814 15:48:03.524" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:03.524"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${value}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20210814 15:27:43.617" endtime="20210814 15:27:44.079"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:04.082"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:43.610" endtime="20210814 15:27:44.080"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:04.082"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:43.609" endtime="20210814 15:27:44.080"/>
+<status status="PASS" starttime="20210814 15:48:03.524" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Then The element 'Payment Method Icons' matches the baseline version" library="assertion_steps" sourcename="The element ${element} matches the baseline version">
 <kw name="Assert Screenshot Element ${element}" library="assertion_keywords" sourcename="Assert Screenshot Element ${element}">
@@ -332,75 +334,76 @@ Without any arguments.</msg>
 <arg>'Discover Icons'</arg>
 <arg>${discover_icons}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210814 15:27:44.083" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:44.083" endtime="20210814 15:27:44.083"/>
+<msg timestamp="20210814 15:48:04.082" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${locatorDictionary}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20210814 15:27:44.084" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:44.084" endtime="20210814 15:27:44.085"/>
+<msg timestamp="20210814 15:48:04.082" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Payment Method Icons'</arg>
 <arg>${payment_icons}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:44.085" endtime="20210814 15:27:44.085"/>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Licensing Authorities and Testing Agencies'</arg>
 <arg>${authorities_agencies}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:44.086" endtime="20210814 15:27:44.086"/>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:44.083" endtime="20210814 15:27:44.088"/>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${locatorDictionary}</arg>
 <arg>${element}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20210814 15:27:44.088" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
-<status status="PASS" starttime="20210814 15:27:44.088" endtime="20210814 15:27:44.088"/>
+<msg timestamp="20210814 15:48:04.082" level="INFO">${value} = xpath=//div[@class="ss-slot-operators-container ss-slot-operators-container--padding-top ss-slot-operators-container--padding-bottom"]</msg>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.082"/>
 </kw>
 <kw name="Open Eyes" library="RobotEyes">
 <arg>lib=SeleniumLibrary</arg>
 <arg>tolerance=5</arg>
-<msg timestamp="20210814 15:27:44.094" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Payment_Icons</msg>
-<status status="PASS" starttime="20210814 15:27:44.088" endtime="20210814 15:27:44.094"/>
+<msg timestamp="20210814 15:48:04.098" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Payment_Icons</msg>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:04.098"/>
 </kw>
 <kw name="Capture Element" library="RobotEyes">
 <arg>${value}</arg>
-<status status="PASS" starttime="20210814 15:27:44.094" endtime="20210814 15:27:45.382"/>
+<status status="PASS" starttime="20210814 15:48:04.098" endtime="20210814 15:48:05.374"/>
 </kw>
 <kw name="Compare Images" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:45.382" endtime="20210814 15:27:45.397"/>
+<msg timestamp="20210814 15:48:05.579" level="INFO">Comparison output: b'0 (0) @ 0,0'</msg>
+<status status="PASS" starttime="20210814 15:48:05.374" endtime="20210814 15:48:05.579"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:45.397" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:48:05.579" endtime="20210814 15:48:10.086"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:44.081" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:10.086"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:44.081" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:48:04.082" endtime="20210814 15:48:10.086"/>
 </kw>
 <kw name="And I close the browser" library="common">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:10.086"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test Complete</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210814 15:27:47.911" level="INFO">Test Complete</msg>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:47.911"/>
+<msg timestamp="20210814 15:48:10.086" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:10.086"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:10.086"/>
 </kw>
 <tag>User is able to compare screenshots of element SS Payment Icons</tag>
-<status status="PASS" starttime="20210814 15:27:38.445" endtime="20210814 15:27:47.911"/>
+<status status="PASS" starttime="20210814 15:47:58.919" endtime="20210814 15:48:10.086"/>
 </test>
 <test id="s1-s1-t4" name="User is able to compare screenshots of element SS Discover Icons">
 <kw name="Given I open a browser" library="common">
@@ -408,14 +411,14 @@ Without any arguments.</msg>
 <arg>about:blank</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210814 15:27:47.911" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:49.870"/>
+<msg timestamp="20210814 15:48:10.086" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:12.150"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20210814 15:27:49.871" endtime="20210814 15:27:50.102"/>
+<status status="PASS" starttime="20210814 15:48:12.151" endtime="20210814 15:48:12.385"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:50.102"/>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:12.385"/>
 </kw>
 <kw name="And I navigate to the 'Slotsource Ireland' page" library="navigation_steps" sourcename="I navigate to the ${website} page">
 <kw name="Run Keyword If" library="BuiltIn">
@@ -432,14 +435,14 @@ Without any arguments.</msg>
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://www.slotsource.ie</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210814 15:27:50.102" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
-<status status="PASS" starttime="20210814 15:27:50.102" endtime="20210814 15:27:52.926"/>
+<msg timestamp="20210814 15:48:12.385" level="INFO">Opening url 'http://www.slotsource.ie'</msg>
+<status status="PASS" starttime="20210814 15:48:12.385" endtime="20210814 15:48:15.048"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:50.102" endtime="20210814 15:27:52.926"/>
+<status status="PASS" starttime="20210814 15:48:12.385" endtime="20210814 15:48:15.048"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:50.102" endtime="20210814 15:27:52.926"/>
+<status status="PASS" starttime="20210814 15:48:12.385" endtime="20210814 15:48:15.048"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:50.102" endtime="20210814 15:27:52.927"/>
+<status status="PASS" starttime="20210814 15:48:12.385" endtime="20210814 15:48:15.049"/>
 </kw>
 <kw name="And I scroll to element 'Discover Icons'" library="action_steps" sourcename="I scroll to element ${element}">
 <kw name="Scroll to element ${element}" library="action_keywords" sourcename="Scroll to element ${element}">
@@ -449,47 +452,47 @@ Without any arguments.</msg>
 <arg>'Discover Icons'</arg>
 <arg>${discover_icons}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210814 15:27:52.933" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:52.932" endtime="20210814 15:27:52.933"/>
+<msg timestamp="20210814 15:48:15.059" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:15.059" endtime="20210814 15:48:15.059"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${locatorDictionary}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20210814 15:27:52.934" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:52.933" endtime="20210814 15:27:52.935"/>
+<msg timestamp="20210814 15:48:15.060" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:15.060" endtime="20210814 15:48:15.060"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Payment Method Icons'</arg>
 <arg>${payment_icons}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:52.935" endtime="20210814 15:27:52.936"/>
+<status status="PASS" starttime="20210814 15:48:15.061" endtime="20210814 15:48:15.062"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Licensing Authorities and Testing Agencies'</arg>
 <arg>${authorities_agencies}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:52.936" endtime="20210814 15:27:52.937"/>
+<status status="PASS" starttime="20210814 15:48:15.062" endtime="20210814 15:48:15.062"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:52.932" endtime="20210814 15:27:52.937"/>
+<status status="PASS" starttime="20210814 15:48:15.059" endtime="20210814 15:48:15.062"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${locatorDictionary}</arg>
 <arg>${element}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20210814 15:27:52.938" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
-<status status="PASS" starttime="20210814 15:27:52.938" endtime="20210814 15:27:52.938"/>
+<msg timestamp="20210814 15:48:15.062" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
+<status status="PASS" starttime="20210814 15:48:15.062" endtime="20210814 15:48:15.062"/>
 </kw>
 <kw name="Scroll Element Into View" library="SeleniumLibrary">
 <arg>${value}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" starttime="20210814 15:27:52.939" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.062" endtime="20210814 15:48:15.435"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:52.931" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.058" endtime="20210814 15:48:15.435"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:52.930" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.057" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Then The element 'Discover Icons' matches the baseline version" library="assertion_steps" sourcename="The element ${element} matches the baseline version">
 <kw name="Assert Screenshot Element ${element}" library="assertion_keywords" sourcename="Assert Screenshot Element ${element}">
@@ -499,80 +502,81 @@ Without any arguments.</msg>
 <arg>'Discover Icons'</arg>
 <arg>${discover_icons}</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20210814 15:27:53.373" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<msg timestamp="20210814 15:48:15.435" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${locatorDictionary}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20210814 15:27:53.373" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<msg timestamp="20210814 15:48:15.435" level="INFO">${locatorDictionary} = {"'Discover Icons'": 'xpath=//div[@class="col-md-10 col-md-offset-2"]'}</msg>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Payment Method Icons'</arg>
 <arg>${payment_icons}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Set To Dictionary" library="Collections">
 <arg>${locatorDictionary}</arg>
 <arg>'Licensing Authorities and Testing Agencies'</arg>
 <arg>${authorities_agencies}</arg>
 <doc>Adds the given ``key_value_pairs`` and ``items`` to the ``dictionary``.</doc>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${value}</var>
 <arg>${locatorDictionary}</arg>
 <arg>${element}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20210814 15:27:53.373" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<msg timestamp="20210814 15:48:15.435" level="INFO">${value} = xpath=//div[@class="col-md-10 col-md-offset-2"]</msg>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Open Eyes" library="RobotEyes">
 <arg>lib=SeleniumLibrary</arg>
 <arg>tolerance=5</arg>
-<msg timestamp="20210814 15:27:53.373" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Discover_Icons</msg>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:53.373"/>
+<msg timestamp="20210814 15:48:15.435" level="INFO">roboteyestestfolder: User_is_able_to_compare_screenshots_of_element_SS_Discover_Icons</msg>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:15.435"/>
 </kw>
 <kw name="Capture Element" library="RobotEyes">
 <arg>${value}</arg>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:54.645"/>
+<status status="PASS" starttime="20210814 15:48:15.451" endtime="20210814 15:48:16.707"/>
 </kw>
 <kw name="Compare Images" library="RobotEyes">
-<status status="PASS" starttime="20210814 15:27:54.645" endtime="20210814 15:27:54.662"/>
+<msg timestamp="20210814 15:48:16.934" level="INFO">Comparison output: b'0 (0) @ 0,0'</msg>
+<status status="PASS" starttime="20210814 15:48:16.707" endtime="20210814 15:48:16.934"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:54.662" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:16.934" endtime="20210814 15:48:20.511"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:20.511"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:53.373" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:15.435" endtime="20210814 15:48:20.511"/>
 </kw>
 <kw name="And I close the browser" library="common">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210814 15:27:57.026" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:20.511" endtime="20210814 15:48:20.511"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>Test Complete</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20210814 15:27:57.026" level="INFO">Test Complete</msg>
-<status status="PASS" starttime="20210814 15:27:57.026" endtime="20210814 15:27:57.026"/>
+<msg timestamp="20210814 15:48:20.511" level="INFO">Test Complete</msg>
+<status status="PASS" starttime="20210814 15:48:20.511" endtime="20210814 15:48:20.511"/>
 </kw>
-<status status="PASS" starttime="20210814 15:27:57.026" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:20.511" endtime="20210814 15:48:20.511"/>
 </kw>
 <tag>User is able to compare screenshots of element SS Discover Icons</tag>
-<status status="PASS" starttime="20210814 15:27:47.911" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:48:10.086" endtime="20210814 15:48:20.511"/>
 </test>
 <doc>Practice a basic test</doc>
-<status status="PASS" starttime="20210814 15:27:04.513" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:47:21.171" endtime="20210814 15:48:20.511"/>
 </suite>
-<status status="PASS" starttime="20210814 15:27:04.466" endtime="20210814 15:27:57.026"/>
+<status status="PASS" starttime="20210814 15:47:21.123" endtime="20210814 15:48:20.511"/>
 </suite>
 <statistics>
 <total>
