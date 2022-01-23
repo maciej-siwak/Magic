@@ -10,7 +10,7 @@ User is able to open SS Ireland website
     [Tags]  User is able to open SS Ireland website
     Given I open a browser
     When I navigate to the 'Slotsource Ireland' page
-    Then I should see the page title Best Online Slots 2021 | Top Online Casino Slots Ireland
+    Then I should see the page title Best Online Slots 2022 | Top Online Casino Slots Ireland
     And I close the browser
 
 User is able search for Peaky Blinders on the Free Slots page
